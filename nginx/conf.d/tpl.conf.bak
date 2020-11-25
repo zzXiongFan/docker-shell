@@ -1,0 +1,9 @@
+server {
+    listen 80;
+    server_name ???;
+
+    location / {
+        proxy_pass http://192.168.29.3:3000;
+        include conf.d/proxy.inc;
+    }
+}
